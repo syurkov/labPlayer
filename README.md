@@ -40,7 +40,7 @@ Write the following test cases:
  songs.sorted().forEach {print($0)}
  ```
 - google how to use String(format: ...) to format the duration (you could also be fine without it)
-- use print(’\(self)’) for printing the description of a class. See the section on CustomStringConvertible below.
+- use ```print(’\(self)’)``` for printing the description of a class. See the section on CustomStringConvertible below.
 CustomStringConvertible protocol to create a String representation for a Song. CustomStringConvertible is the protocol from the Swift library, it forces you to implement description field.
 
 ```swift
