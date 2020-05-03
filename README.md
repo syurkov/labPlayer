@@ -10,15 +10,9 @@ https://github.com/coast-uni-lu/pf2-2020-course/blob/master/07-Operators-and-Sta
 ## Exercise 1 - Equality and Comparison with a Music Player
 
 ### Music Player
-A music player is a playlist with songs. A playlist is a countable entity that can not be shared among different users. The playlist has: name, list of songs, play counter, total duration.
+A music player is a playlist with songs. A playlist is a countable entity that **can not** be shared among different users. The playlist has: name, list of songs, play counter, total duration.
 
 No one can access the list of songs. But. It is possible to add songs to the list and play them one after another. Each time the playlist is played, the counter of the playlist is increased. The counter describes the number of times a playlist has been played (playlist is a countable entity). The duration of the playlist the sum of the songs' durations it contains.
-
-Tasks: 
-- define Countable protocol
-- implement the playlist
-- implement the add(song: Song) method that adds a song to the list. Playlist can't have the same song twice. If the song is already on the list, the user gets a notification. 
-- implement play() method that plays songs in the playlist one by one. Increase the counter each time the playlist is played. Output in the console the song currently playing and its duration (nicely formatted, see below)
 
 ### Duration
 The duration is a comparable entity and represents a time duration in seconds. However, in some cases duration must be formatted [MM:SS].
@@ -29,8 +23,31 @@ The song is a countable and comparable entity. The song has: title, artist, dura
 
 The counter indicates how many times a song has been played: the counter is increased each time song is played. User sees currently played song in the format: TITLE by ARTIST [DURATION], e.g. 'Chosen Family' by Rina Sawayama [04:09]'
 
-Hint
-Use CustomStringConvertible protocol to create a String representation for a Song. CustomStringConvertible is the protocol from the Swift library, it forces you to implement description field.
+Songs are also comparable entities. Two songs are equal if their title, artist, and duration are the same. Songs also can be sorted. The natural order of sorting is defined below in decreased priority.
+
+1. title (alphabetically)
+2. artist (alphabetically)
+3. duration (numerically)
+
+### Testcases
+Tasks: 
+- define Countable protocol
+- implement the playlist
+- implement the add(song: Song) method that adds a song to the list. Playlist can't have the same song twice. If the song is already on the list, the user gets a notification. 
+- implement play() method that plays songs in the playlist one by one. Increase the counter each time the playlist is played. Output in the console the song currently playing and its duration (nicely formatted, see below)
+Write the following test cases:
+- in your **main.swift** file Create 2 objects of type Duration and compare them.
+- create the array with 3 different songs. Sort it and print the sorted array. Check that .contains function works properly for your array.
+- add some songs to the playlist. Continue by sorting the list of songs of the playlist. Print out the songs and analyze the outputs. Are the songs in the right order?
+
+### Hints :
+- you may use the following code to sort and print the songs of the array.
+```swift
+ songs.sorted().forEach {print($0)}
+ ```
+- google how to use String(format: ...) to format the duration (you could also be fine without it)
+- use print(’\(self)’) for printing the description of a class. See the section on CustomStringConvertible below.
+CustomStringConvertible protocol to create a String representation for a Song. CustomStringConvertible is the protocol from the Swift library, it forces you to implement description field.
 
 ```swift
 class MyClass: CustomStringConvertible {
@@ -44,28 +61,6 @@ print("str representation of my object is \(x)")
 //outputs 
 //str representation of my object is sTrInG_RePrEsEnTaTi0n
 ```
-
-Songs are also comparable entities. Two songs are equal if their title, artist, and duration are the same. Songs also can be sorted. The natural order of sorting is defined below in decreased priority.
-
-1. title (alphabetically)
-2. artist (alphabetically)
-3. duration (numerically)
-
-### Testcases
-Write the following test cases:
-1. Create 2 objects of type Duration and compare them.
-2. Create the array with 3 different songs. Sort it and print the sorted array. Check that .contains function works properly for your array.
-3. Add some songs to the playlist. Continue by sorting the list of songs of the playlist. Print out the songs and analyze the outputs. Are the songs in the right order?
-
-### Hints : 
-- Use print(’\(self)’) for printing the description of a class. See the section on CustomStringConvertible above.
-- You may use the following code to sort and print the songs of the array.
-```swift
- songs.sorted().forEach {print($0)}
- ```
-- Google how to use String(format: ...) to format the duration (you could also be fine without it)
-
-
 
 ## Exercise 2 - Other Sortingtype for Songs
 
