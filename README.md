@@ -29,11 +29,11 @@ Songs are also comparable entities. Two songs are equal if their title, artist, 
 - implement the Song and song's ```play``` method
 - implement methods to compare two songs and to tell whether songs are the same (see **Song** description above)
 - implement the Playlist
-- implement add(song: Song) method that adds a song to the list. Playlist can't have the same song twice. If the song is already on the list, the user gets a notification. 
+- implement add(song: Song) method that adds a song to the list. Playlist can't have the same song twice. If the song is already on the list (use ```.contains``` to check for that), the user gets a notification. 
 - implement play() method that plays songs in the playlist one by one. Increase the counter each time the playlist is played. Output in the console the song currently playing and its duration (nicely formatted, see below)
 Write the following test cases:
 - in your **main.swift** file Create 2 objects of type Duration and compare them.
-- create the array with 3 different songs. Sort it and print the sorted array. Check that .contains function works properly for your array.
+- create the array with 3 different songs. Sort it and print the sorted array. Check that ```.contains``` function works properly for your array.
 - add some songs to the playlist. Continue by sorting the list of songs of the playlist. Print out the songs and analyze the outputs. Are the songs in the right order?
 
 ### Hints :
