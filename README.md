@@ -9,7 +9,7 @@ https://github.com/coast-uni-lu/pf2-2020-course/blob/master/07-Operators-and-Sta
 
 ## Exercise 1 - Equality and Comparison with a Music Player
 
-### Music Player
+### Music Player (Playlist)
 A music player is a playlist with songs. A playlist is a countable entity that **can not** be shared among different users. The playlist has: name, list of songs, play counter, total duration.
 
 No one can access the list of songs. But. It is possible to add songs to the list and play them one after another. Each time the playlist is played, the counter of the playlist is increased. The counter describes the number of times a playlist has been played (playlist is a countable entity). The duration of the playlist the sum of the songs' durations it contains.
