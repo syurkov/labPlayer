@@ -1,0 +1,37 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>710</x><y>110</y><w>320</w><h>160</h></coordinates><panel_attributes>Bank
+--
+- bicCode:String
+- address:String
+
+- customer //FIND TYPE
+- accounts //FIND TYPE
+--
+- retrieveAccount(accountnumber:Int) -&gt; BankAccount?
+- monthlyUpdates()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1280</x><y>100</y><w>610</w><h>160</h></coordinates><panel_attributes>Customer
+--
+- firstname:String
+- lastname:String
+- address:String
+--
+- askForDeposit(to clerk:Clerk, accountnumber:Int, for amount:Double)
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>170</y><w>280</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;260;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>300</y><w>520</w><h>140</h></coordinates><panel_attributes>Clerk
+--
+- firstname:String
+- lastname:String
+- workingplace:Bank
+--
+- deposit(accountnumber:Int, amount:Double)
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>260</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>460</y><w>240</w><h>140</h></coordinates><panel_attributes>BankAccount
+--
+- accountnumber:Int
+- balance:Double
+- customer:Customer
+--
+- withdraw(amount:Double) -&gt; Double
+- deposit(amount:Double) -&gt; Double
+- monthlyUpdate()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>170</y><w>390</w><h>310</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>370;20;10;20;10;290</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>250</y><w>950</w><h>320</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>930;10;930;300;10;290</additional_attributes></element></diagram>

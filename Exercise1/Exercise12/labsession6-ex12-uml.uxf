@@ -1,0 +1,66 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>710</x><y>110</y><w>320</w><h>160</h></coordinates><panel_attributes>Bank
+--
+- bicCode:String
+- address:String
+
+- customer //FIND TYPE //Ex1.1
+- accounts //FIND TYPE //Ex1.1
+--
+- retrieveAccount(accountnumber:Int) -&gt; BankAccount?
+- monthlyUpdates()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1280</x><y>110</y><w>610</w><h>190</h></coordinates><panel_attributes>Customer
+--
+- firstname:String
+- lastname:String
+- address:String
+--
+- askForDeposit(to clerk:Clerk, accountnumber:Int, for amount:Double)
+- ... //Ex1.1
+- func putCardInAtm(cardnumber:Int, atm:Atm)
+- func abort(atm:Atm)
+- func enterPassword(password:Int, atm:Atm)
+- func getCash(... //Ex 1.2) -&gt; //Ex 1.2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1020</x><y>170</y><w>280</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;260;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>370</y><w>520</w><h>140</h></coordinates><panel_attributes>Clerk
+--
+- firstname:String
+- lastname:String
+- workingplace:Bank
+--
+- deposit(accountnumber:Int, amount:Double)
+- ... //Ex1.1</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>260</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>470</y><w>240</w><h>140</h></coordinates><panel_attributes>BankAccount
+--
+- accountnumber:Int
+- balance:Double
+- customer:Customer
+--
+- withdraw(amount:Double) -&gt; Double
+- deposit(amount:Double) -&gt; Double
+- monthlyUpdate()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>170</y><w>390</w><h>320</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>370;20;10;20;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>290</y><w>960</w><h>280</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>940;10;940;260;10;260</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1600</x><y>570</y><w>230</w><h>210</h></coordinates><panel_attributes>ATM
+--
+- id:Int
+- location:String
+... //Ex1.2
+--
+- takeCard(...)
+- returnCard()
+- getCash(amount:Double) -&gt; ...
+- login(password:Int)
+- logout()
+- private hasCard() -&gt; ...
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1150</x><y>590</y><w>210</w><h>170</h></coordinates><panel_attributes>Card
+--
+- cardnumber:Int
+- expiryDate:String
+- account:BankAccount
+- password:Int
+- attemps:Int = 0
+- maxAttemps:Int = 3
+--
+- getCash(amount:Double) -&gt; Double
+- pay(amount:Double)
+- monthlyUpdate()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>590</y><w>720</w><h>80</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>700;60;390;60;390;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1350</x><y>640</y><w>270</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element></diagram>
