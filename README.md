@@ -10,21 +10,15 @@ https://github.com/coast-uni-lu/pf2-2020-course/blob/master/07-Operators-and-Sta
 ## Exercise 1 - Equality and Comparison with a Music Player
 
 ### Music Player (Playlist)
-A music player is a playlist with songs. A playlist is a countable entity that **can not** be shared among different users. The playlist has: name, list of songs, play counter, total duration.
-
-No one can access the list of songs. But. It is possible to add songs to the list and play them one after another. Each time the playlist is played, the counter of the playlist is increased. The counter describes the number of times a playlist has been played (playlist is a countable entity). The duration of the playlist the sum of the songs' durations it contains.
+A music player is a playlist with songs. A playlist is a countable entity that **can not** be shared among different users. The playlist has: name, list of songs, play counter, total duration. No one can access the list of songs. But. It is possible to add songs to the list and play them one after another. Each time the playlist is played, the counter of the playlist is increased. The counter describes the number of times a playlist has been played (playlist is a countable entity). The duration of the playlist the sum of the songs' durations it contains.
 
 ### Duration
-The duration is a comparable entity and represents a time duration in seconds. However, in some cases duration must be formatted [MM:SS].
-Each pair of duration objects can be compared in an obvious way (by duration in seconds).
+The duration is a comparable entity and represents a time duration in seconds. However, in some cases duration must be formatted [MM:SS]. Each pair of duration objects can be compared in an obvious way (by duration in seconds).
 
 ### Song
-The song is a countable and comparable entity. The song has: title, artist, duration, counter.
-
-The counter indicates how many times a song has been played: the counter is increased each time song is played. User sees currently played song in the format: TITLE by ARTIST [DURATION], e.g. 'Chosen Family' by Rina Sawayama [04:09]'
+The song is a countable and comparable entity. The song has: title, artist, duration, counter. The counter indicates how many times a song has been played: the counter is increased each time song is played. User sees currently played song in the format: TITLE by ARTIST [DURATION], e.g. 'Chosen Family' by Rina Sawayama [04:09]'.
 
 Songs are also comparable entities. Two songs are equal if their title, artist, and duration are the same. Songs also can be sorted. The natural order of sorting is defined below in decreased priority.
-
 1. title (alphabetically)
 2. artist (alphabetically)
 3. duration (numerically)
