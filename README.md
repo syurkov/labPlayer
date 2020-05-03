@@ -70,7 +70,7 @@ Rules for this order are:
 1. Sorted by count in descending order.
 2. If we have songs with the same counter, use the natural/default comparison.
 
-- Write another function to compare two songs by its duration in ascending order and sort the playlist again. Rules are (in desc order)
+- Write another function to compare two songs by its duration in ascending order and sort the playlist again. Rules are (in dec order):
 1. duration (numerically)
 2. title (alphabetically)
 3. artist (alphabetically)
