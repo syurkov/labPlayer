@@ -23,11 +23,13 @@ Songs are also comparable entities. Two songs are equal if their title, artist, 
 2. artist (alphabetically)
 3. duration (numerically)
 
-### Testcases
-Tasks: 
+### Tasks
+- complete UML diagram
 - define Countable protocol
-- implement the playlist
-- implement the add(song: Song) method that adds a song to the list. Playlist can't have the same song twice. If the song is already on the list, the user gets a notification. 
+- implement the Song and song's ```play``` method
+- implement methods to compare two songs and to tell whether songs are the same (see **Song** description above)
+- implement the Playlist
+- implement add(song: Song) method that adds a song to the list. Playlist can't have the same song twice. If the song is already on the list, the user gets a notification. 
 - implement play() method that plays songs in the playlist one by one. Increase the counter each time the playlist is played. Output in the console the song currently playing and its duration (nicely formatted, see below)
 Write the following test cases:
 - in your **main.swift** file Create 2 objects of type Duration and compare them.
@@ -61,11 +63,11 @@ print("str representation of my object is \(x)")
 Continue with the project of the previous exercise, use the same **main.swift** you already have.
 
 ### Exercise 2.1
-- in your **main.swift** create a function to compare two songs by comparing their counter only.
+- in your **main.swift** create a function to compare two songs by comparing their counters only.
 
 Use the this new function to sort some array of songs. The sorted list should obey the following rules:
 1. Sorted by count in descending order.
-2. If we have songs with the same counter, use the natural comparison.
+2. If we have songs with the same counter, use the natural/default comparison.
 Write some testcases and sort the previously defined playlist.
 
 ### Exercise 2.2
