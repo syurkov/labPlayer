@@ -60,7 +60,7 @@ print("str representation of my object is \(x)")
 
 ## Exercise 2 - Other Sortingtype for Songs
 
-Continue with the project of the previous exercise, use the same **main.swift** you already have.
+Continue with the project of the previous exercise, use the same **main.swift** you already have. Now we introduce another sorting criteria for the list of songs.
 
 ### Tasks
 
