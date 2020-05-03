@@ -62,21 +62,18 @@ print("str representation of my object is \(x)")
 
 Continue with the project of the previous exercise, use the same **main.swift** you already have.
 
-### Exercise 2.1
-- in your **main.swift** create a function to compare two songs by comparing their counters only.
+### Tasks
 
-Use the this new function to sort some array of songs. The sorted list should obey the following rules:
+- In your **main.swift** create the function to compare songs by counters. Then use this function to sort the playlist you've created in the previous exercise. 
+
+Rules for this order are:
 1. Sorted by count in descending order.
 2. If we have songs with the same counter, use the natural/default comparison.
-Write some testcases and sort the previously defined playlist.
 
-### Exercise 2.2
-Write another function to compare two songs by itst duration in ascending order. The sorted list should objey the following rules :
+- Write another function to compare two songs by its duration in ascending order and sort the playlist again. Rules are (in desc order)
 1. duration (numerically)
 2. title (alphabetically)
 3. artist (alphabetically)
-
-Write some testcases and sort the previously defined playlist.
 
 ### Hints
 - You can sort of the songs of the playlist by using the following code.
